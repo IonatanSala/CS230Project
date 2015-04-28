@@ -1,8 +1,6 @@
 <?php
-// Connect to the DB
+// Connect to the DB, get games and users
 include('includes/connectDB.php');
-// Get the games from the DB
-include('includes/getGames.php');
 //Set the title for this homepage
 $title = "Home Page";
 // include the header
@@ -29,7 +27,7 @@ include('includes/header.php');
 				<ul>
 				<?php
 
-					for($i = 0; $i<8; $i++) {
+					for($i = 14; $i<43; $i+=4) {
 
 						echo "<li>";
 						echo "<a href='product.php'>";
@@ -37,7 +35,7 @@ include('includes/header.php');
 						echo "<div class='info'>";
 						echo "<span>" . $myGames[$i]["title"] . "</span>";
 						echo "<hr>";
-						echo "<span>&euro; " . $myGames[$i]["price"] . "</span>";
+						echo "<span>" . $myGames[$i]["price"] . "</span>";
 						echo "</div>";
 						echo "</a>";
 						echo "</li>";

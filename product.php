@@ -1,6 +1,6 @@
 <?php
 
-include('includes/header.php'); 
+include('includes/header.php');
 
 ?>
 
@@ -12,7 +12,7 @@ include('includes/header.php');
 				<div class="item-description">
 					<h2>Total War Attila</h2>
 					<hr>
-					<h3>&euro; 39.99</h3>	
+					<h3>&euro; 39.99</h3>
 					<div class="product-btn">
 						<button class="btn-console"><a href="#">
 							<span>SELECT CONSOLE</span>
