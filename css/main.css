@@ -6,7 +6,7 @@
 	margin: 0;
 	padding: 0;
 
-	
+
 }
 
 p, li,h1,h2,h3,h4,h5 {
@@ -40,7 +40,7 @@ ul {
 
 
 header.nav-header {
-	position: fixed;
+	position: relative;
 	top:0;
 	background-color: HSLA(0, 100%, 100%, 0.9);
 	border-top: 4px solid HSLA(0, 69%, 59%, 1);
@@ -48,9 +48,8 @@ header.nav-header {
 	width: 100%;
 	min-width: 546px;
 	box-shadow: 0px .5px 3px 0px rgba(0, 0, 0, 0.75);
-	/*position: fixed;
-	top: 0;*/
-	/*box-shadow: 0 6px 4px -4px #999;*/
+	position: fixed;
+	top: 0;
 }
 
 header.nav-header header.top {
@@ -59,7 +58,7 @@ header.nav-header header.top {
 }
 
 header.nav-header header.top div {
-	
+
 }
 
 header.nav-header header.top div h2 {
@@ -79,8 +78,8 @@ nav.navbar {
 	display: flex;
 	align-items: center;
 	min-width: inherit;
-	
-	
+
+
 }
 
 nav.navbar .nav-content {
@@ -122,7 +121,7 @@ nav.navbar .nav-content {
 	/*margin-left: -50px;
 	margin-right: 100px;
 */	width: 50px;
-	
+
 }
 
 .icon-search-container {
@@ -142,7 +141,7 @@ nav.navbar .nav-content {
 
 .icon-search {
 	cursor: pointer;
-	
+
 	width: 25px;
 	height: 25px;
 	margin-left: 10px;
@@ -166,7 +165,7 @@ input.search-container {
 	border-radius: 5px;
 	height: 32px;
 	width: 220px;
-	
+
 }
 
 input:focus {
@@ -193,7 +192,7 @@ section.landing div.jumbotron {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(
-      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ), url('../img/landing.jpeg') center center;
 	background-size: cover;
@@ -202,6 +201,7 @@ section.landing div.jumbotron {
 	align-items: center;
 	justify-content: center;
 }
+
 section.landing div.jumbotron div {
 	display: flex;
 	flex-flow: column wrap;
@@ -235,7 +235,7 @@ section.landing div.jumbotron div button {
 section.landing div.jumbotron div button:hover {
 	border: 2px solid HSLA(0, 69%, 59%, 1);
 	color: HSLA(0, 69%, 59%, 1);
-	
+
 }
 
 
@@ -246,10 +246,10 @@ section.landing div.jumbotron div button:hover {
 
 section.featured {
 	width: 100%;
-	background: HSLA(0, 0%, 95%, 1);
+	/*background: HSLA(0, 0%, 95%, 1);*/
 	padding-bottom: 100px;
 	/**/
-	
+
 }
 
 
@@ -272,7 +272,7 @@ section.featured > hr {
 
 section.featured div.featured-items {
 	width: 80%;
-	margin-left: 10%;	
+	margin-left: 10%;
 
 
 }
@@ -436,7 +436,7 @@ div.product-btn {
 }
 
 div.product-btn button.btn-console, div.product-btn button.btn-cart {
-	
+
 	padding: 20px 60px;
 	font-weight: bold;
 	color: HSLA(0, 69%, 59%, 1);
@@ -495,7 +495,7 @@ header.cart-header div {
 	margin-top: 25px;
 	margin-right: 25px;
 
-	
+
 }
 
 
@@ -507,7 +507,7 @@ header.cart-header div {
 div.cart-content {
 	width: 100%;
 	height: 90%;
-	
+
 	display: flex;
 	flex-flow: row wrap;
 }
@@ -515,7 +515,7 @@ div.cart-content {
 div.item-wrapper {
 	width: 50%;
 	/*background: blue;*/
-	
+
 
 }
 
@@ -531,8 +531,8 @@ ul.item-content li {
 	flex-flow: row wrap;
 	justify-content: flex-end;
 	align-items: center;
-	border-bottom: 1px solid black; 
-	
+	border-bottom: 1px solid black;
+
 }
 
 ul.item-content li div:first-child {
@@ -568,7 +568,7 @@ div.cart-total em {
 }
 
 div.cart-total a {
-	
+
 	/*width: 50px;*/
 	border: 2px solid HSLA(359, 68%, 59%, 1);
 	border-radius: 25px;
@@ -603,7 +603,7 @@ div.cart-total a:hover {
 div.search-wrapper {
 	width: 50%;
 	/*background: blue;*/
-	
+
 
 }
 
@@ -619,8 +619,8 @@ ul.search-content li {
 	flex-flow: row wrap;
 	justify-content: flex-end;
 	align-items: center;
-	border-bottom: 1px solid black; 
-	
+	border-bottom: 1px solid black;
+
 }
 
 ul.search-content li div:first-child {
@@ -652,29 +652,85 @@ ul.search-content li img {
 }
 
 
+/*******************************
+		SIGN UP PAGE
+*********************************/
+
+section#sign-up-form {
+	box-sizing: border-box;
+	padding: 25px;
+	margin: 20px auto;
+	width: 100%;
+	max-width: 550px;
+	min-width: 500px;
+	font-size: 1.2em;
+	border-radius: 5px;
+	/*border: 2px solid red;*/
+	color: #fff;
+	background: HSLA(0, 0%, 10%, 1);
 
 
 
 
+}
+
+section#sign-up-form hr {
+	border: 0;
+	background: HSLA(359, 81%, 61%, 1);
+	height: 3px;
+	border-radius: 2px;
+	margin-top: 5px;
+}
+
+section#sign-up-form form {
+	max-width: 500px;
+	min-width: 450px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	margin: 0 auto;
 
 
+}
 
+section#sign-up-form form label {
+	display: flex;
+	flex-flow: row no wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+}
 
+section#sign-up-form form label i {
+	margin-right: 20px;
+	/*color: HSLA(359, 81%, 61%, 1) ;*/
+}
 
+section#sign-up-form form label input{
+	margin-left: auto;
+	padding: 5px;
+	border-radius: 5px;
+	height: 40px;
+	width: 250px;
+	border: 1px solid rgba(0,0,0, 0.2);
+	/*font-size: 200px;*/
+	color: #000;
 
+}
 
+section#sign-up-form form > input {
+	width: 100px;
+	margin: 0 auto;
+	padding: 10px;
+	border: 0;
+	color: HSLA(359, 81%, 61%, 1);
+	font-weight: bold;
+	background: #fff;
+	border-radius: 5px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+section#sign-up-form form > input:hover {
+	/*border: 1px solid HSLA(359, 81%, 61%, 1);*/
+	color: #fff;
+	background: HSLA(359, 81%, 61%, 1);
+}

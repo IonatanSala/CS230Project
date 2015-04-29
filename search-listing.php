@@ -1,5 +1,5 @@
 <?php include('includes/header.php'); ?>
-	
+
 	<div class="result-wrapper">
 		<div class="search-wrapper">
 			<ul class="search-content">

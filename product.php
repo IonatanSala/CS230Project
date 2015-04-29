@@ -1,18 +1,25 @@
 <?php
+include('includes/connectDB.php');
 
-include('includes/header.php'); 
+$id = $_GET['id'];
+
+// select from database where id == id
+$game = $myGames[$id];
+// echo that data on page
+
+include('includes/header.php');
 
 ?>
 
 	<section class="product">
 			<div class="product-content">
 				<div class="item-container">
-					<img src="img/attila.jpg" alt="Total War Attila">
+					<img src='<?php echo $game["images"]; ?>' alt="Total War Attila">
 				</div>
 				<div class="item-description">
-					<h2>Total War Attila</h2>
+					<h2><?php echo $game["title"]; ?></h2>
 					<hr>
-					<h3>&euro; 39.99</h3>	
+					<h3><?php echo $game["price"]; ?></h3>
 					<div class="product-btn">
 						<button class="btn-console"><a href="#">
 							<span>SELECT CONSOLE</span>
@@ -22,9 +29,8 @@ include('includes/header.php');
 						</a></button>
 					</div>
 					<div class="product-description">
-						<p>The Viking Forefathers Culture Pack adds The Norsemen as a new playable culture to Total War™: ATTILA. These factions may be used in Single or Multiplayer Campaign modes and Custom and Multiplayer battles.</p>
-						<br>
-						<p>With the Viking Forefathers at their command, players can marshal the forces of The Geats, The Jutes and The Danes as they launch southwards from their icy homelands on campaigns of looting, raiding and conquest. In the bitter, windswept north, hard winters breed hard men, and Norse warriors are redoubtable in combat on land and sea. To these natural seafarers and expert coastal raiders, the plentiful lands to the south promise glorious victories and great plunder!</p>
+						<p> <?php echo $game["description"]; ?> <p>
+
 					</div>
 				</div>
 			</div>
