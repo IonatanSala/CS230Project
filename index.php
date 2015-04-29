@@ -30,7 +30,7 @@ include('includes/header.php');
 					for($i = 14; $i<43; $i+=4) {
 
 						echo "<li>";
-						echo "<a href='product.php'>";
+						echo "<a href='product.php?id=".$i."'>";
 						echo "<img src='" . $myGames[$i]["images"] . "' alt='" . $myGames[$i]["title"] . "' >";
 						echo "<div class='info'>";
 						echo "<span>" . $myGames[$i]["title"] . "</span>";
