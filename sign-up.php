@@ -1,6 +1,7 @@
 <?php include('includes/header.php'); ?>
 
-
+<br><br><br><br>
+    
 		<section id="sign-up-form">
 			<h2>Register</h2>
 			<hr>

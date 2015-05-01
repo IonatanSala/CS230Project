@@ -1,38 +1,71 @@
+
 <html>
   <head>
-    <title>Ajax Search Box using PHP and MySQL</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">        </script>
-     <script src="typeahead.min.js"></script>
+    <title>Search Box</title> 
+     
     </head>
     <body>
-     <input type="text" name="typeahead">
+    
+        <form action="test.php" method="get">  
+            <input type="text" name="term" /> 
+            <input type="submit" name = "search" value="Submit" /> 
+            <br><br>  
+        </form> 
+            
+                
+    
 
-        <?php
-// Connecting, selecting database
-$dbconn = pg_connect("host=webcourse.cs.nuim.ie dbname=cs230 user=cs230teamd2 password=ohNgohTo")
+<?php 
+$dbconn = pg_connect("host=webcourse.cs.nuim.ie dbname=cs230 user= cs230teamd2 password= ohNgohTo")
     or die('Could not connect: ' . pg_last_error());
+$term = pg_escape_string($_REQUEST['term']);
 
-// Performing SQL query
-$query = 'SELECT * FROM authors';
-$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
-// Printing results in HTML
-echo "<table>\n";
+$query = "SELECT * FROM games WHERE lower(title) LIKE '%$term%'";
+
+$result = pg_query($dbconn, $query) or die("Error in query: $query.
+         " . pg_last_error($db));
+
+// Print result on screen
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    echo "\t<tr>\n";
     foreach ($line as $col_value) {
-        echo "\t\t<td>$col_value</td>\n";
+        echo $col_value."<br />";
     }
-    echo "\t</tr>\n";
 }
-echo "</table>\n";
 
-// Free resultset
-pg_free_result($result);
+    pg_close($dbconn); 
 
-// Closing connection
-pg_close($dbconn);
-        ?>
+    
+    
+?>
+       
+        
+
+
+    
+    
+
+
+
+
+
+
+    
+    
+    
+
+
+        
+  
+
+
+
+
+
+
+        
+
+
 
     </body>
     </html>
