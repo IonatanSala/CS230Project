@@ -34,5 +34,6 @@
   // Closing connection
   pg_close($dbconn);
 
+  // var_dump($myGames);
 
 ?>

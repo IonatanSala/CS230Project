@@ -26,5 +26,6 @@ $(function() {
 	// 	$landingContainer.css({"background-image": "url('img/" + images[counter] + "')"});
 	// 	counter++;
 	//  }, 3000);
+	
 
 });

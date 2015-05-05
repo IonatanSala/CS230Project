@@ -59,12 +59,12 @@ else{
 
 <div id="searchbar">
 
-<form action="../php/search1.php" method="get" enctype="multipart/form-data">  
-<input type="text" name="term" /> 
-<input type="submit" name = "search" value="Submit" /> 
-<br><br>  
-</form> 
-</div>	
+<form action="../php/search1.php" method="get" enctype="multipart/form-data">
+<input type="text" name="term" />
+<input type="submit" name = "search" value="Submit" />
+<br><br>
+</form>
+</div>
 
 <div id="navbar">
 <nav>
@@ -82,7 +82,7 @@ else{
 //This part checks if one of the navbar links for searching has been selected. if so it sets the associated searchValue as the Term to search the products
 $_SESSION['searchValue'] = null;
 if(isset($_GET['searchValue'])){
-$_SESSION['searchValue'] = $_GET['searchValue'];		
+$_SESSION['searchValue'] = $_GET['searchValue'];
 }
 if($_SESSION['searchValue']=="electricSearch"){
 $term="electric";
@@ -109,7 +109,7 @@ if ($term == "")
 }
 else{
 ?>
-<div class="p2">You Searched for: <?php Print $term;  
+<div class="p2">You Searched for: <?php Print $term;
 }
 ?>
 </div>
@@ -134,7 +134,7 @@ else{
 $selected = array();
 $orderby = null;
 $orderby = $_GET['orderby']; //$orderby is set equal to the chosen option
-if(!$orderby) 
+if(!$orderby)
 { $orderby = 'title'; } //if an option is not picked the default is 'title'
 
 if($orderby == 'price_asc') //Each value is part of an if statement
@@ -196,10 +196,10 @@ $pro_price= $row['price'];
 <?php
 if($row['rating']==0){
 print ("<IMG SRC = ../images/0star.png>");
-} 
+}
 if($row['rating']==1){
 print ("<IMG SRC = ../images/1star.png>");
-} 
+}
 else if($row['rating']==2){
 print ("<IMG SRC = ../images/2star.png>");
 }
@@ -225,13 +225,13 @@ else{        // if user not logged on tell them to log on to be able to purchase
 <?php
 }
 ?>
-</td>                                     
+</td>
 </table>
 
 
 <br>
 <br>
-<?php  
+<?php
 }
 }
 ?>

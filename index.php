@@ -14,10 +14,11 @@ include('includes/header.php');
 				<div>
 					<h2>World's largest</h2>
 					<h2>video game store</h2>
-					<button><a href="#">Learn More</a></button>
+					<button><a href=".featured">Learn More</a></button>
 				</div>
 			</div>
 		</section>
+		<sec
 
 		<!-- FETURED SECTION -->
 		<section class="featured">
@@ -27,10 +28,10 @@ include('includes/header.php');
 				<ul>
 				<?php
 
-					for($i = 14; $i<43; $i+=4) {
+					for($i = 14; $i<30; $i+=2) {
 
 						echo "<li>";
-						echo "<a href='product.php?id=".$i."'>";
+						echo "<a href='product.php?id=".$myGames[$i]["id"]."'>";
 						echo "<img src='" . $myGames[$i]["images"] . "' alt='" . $myGames[$i]["title"] . "' >";
 						echo "<div class='info'>";
 						echo "<span>" . $myGames[$i]["title"] . "</span>";

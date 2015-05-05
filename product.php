@@ -1,11 +1,15 @@
 <?php
 include('includes/connectDB.php');
 
-$id = $_GET['id'];
+  $id = $_GET['id'];
 
-// select from database where id == id
-$game = $myGames[$id];
-// echo that data on page
+	$game = array();
+
+	foreach($myGames as $theGame) {
+		if($theGame["id"] == $id) {
+			$game = $theGame;
+		}
+	}
 
 include('includes/header.php');
 
@@ -14,7 +18,7 @@ include('includes/header.php');
 	<section class="product">
 			<div class="product-content">
 				<div class="item-container">
-					<img src='<?php echo $game["images"]; ?>' alt="Total War Attila">
+					<img src='<?php echo $game["images"]; ?>' alt="<?php echo $game['title']; ?>">
 				</div>
 				<div class="item-description">
 					<h2><?php echo $game["title"]; ?></h2>
