@@ -114,7 +114,8 @@ nav.navbar .nav-content {
 }
 
 .nav-content li:last-child {
-  margin-left:auto !important;
+  margin-right:auto !important;
+  margin-left: 40px;
 
 }
 

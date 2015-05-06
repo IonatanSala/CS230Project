@@ -28,8 +28,6 @@
     $myUsers[] = $line;
   }
 
-  // Free resultset
-  pg_free_result($result);
 
   // Closing connection
   pg_close($dbconn);

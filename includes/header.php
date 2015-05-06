@@ -8,7 +8,7 @@
 		<!-- This resets all the css for every browser -->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<!-- fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="icons/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>

@@ -25,15 +25,15 @@ $(function() {
 
 	lgn_btn.addEventListener('click', function(event) {
 		event.preventDefault();
-		$(login).show();
+		$(login).toggle();
 		document.body.style.overflow = "hidden";
 	});
 
-	// lgn_btn.addEventListener('click', function(event) {
-	// 	event.preventDefault();
-	// 	$(login).hide();
-	// 	document.body.style.overflow = "";
-	// });
+	$('body').on('click',function() {
+		// alert('hi');
+		$(login).toggle();
+		document.body.style.overflow = "";
+	});
 	
 
 });
