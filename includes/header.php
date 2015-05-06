@@ -15,7 +15,7 @@
 	<body>
 
 		<!-- the maing navigation -->
-		<header class="nav-header">
+
 			<nav class="navbar">
 				<ul class="nav-content">
 					<li class="logo"><a href="index.php"><img src="img/logo1.png"></a></li>
@@ -28,11 +28,11 @@
 					<li>
 						<form class="icon-search-container" action="search-listing.php" method="get">
 							<input class="search-container" type="text" name="term" placeholder="Search...">
-							<button style="border: 0; background: transparent;" type="submit"><i class="fa fa-search fa-2x"></i></button>
+							<button style="border: 0; background: transparent;" type="submit"><i style="margin-left:8px;" class="fa fa-search"></i></button>
 							<!-- <input type="submit" name = "search" value="" /></i> -->
 						</form>
 					</li>
-					<li id= "cart-icon"><a href="#"><i class="fa fa-shopping-cart fa-2x"></i><!-- (0) --></a></li>
+					<li id= "cart-icon"><a href="#"><i class="fa fa-shopping-cart"></i><!-- (0) --></a></li>
+          <li><a class="lgn-btn" href="login.php">Login</a><a href="sign-up.php">Sign Up</a></li>
 				</ul>
 			</nav>
-		</header>

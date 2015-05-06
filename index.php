@@ -52,6 +52,10 @@ include('includes/header.php');
 			include('includes/cart.php');
 		?>
 
+		<?php 
+			include('includes/log-in.php');
+		?>
+
 
 
 <?php

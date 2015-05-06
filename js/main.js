@@ -6,6 +6,9 @@ $(function() {
 	var cartSection = document.body.querySelector('.cart');
 	var exitCart = document.getElementById('cart-exit');
 
+	var login = document.getElementById('log-container');
+	var lgn_btn = document.body.querySelector('.lgn-btn');
+	
 
 	cart.addEventListener('click', function() {
 
@@ -18,14 +21,19 @@ $(function() {
 		document.body.style.overflow = '';
 	});
 
-	var $landingContainer = $("div.jumbotron");
-	var images = ["attila.jpg", "battlefield.jpg", "bloodborne.jpg", "COD.jpg"];
-	var counter = 0;
+	
 
-	// setInterval(function(){
-	// 	$landingContainer.css({"background-image": "url('img/" + images[counter] + "')"});
-	// 	counter++;
-	//  }, 3000);
+	lgn_btn.addEventListener('click', function(event) {
+		event.preventDefault();
+		$(login).show();
+		document.body.style.overflow = "hidden";
+	});
+
+	// lgn_btn.addEventListener('click', function(event) {
+	// 	event.preventDefault();
+	// 	$(login).hide();
+	// 	document.body.style.overflow = "";
+	// });
 	
 
 });
